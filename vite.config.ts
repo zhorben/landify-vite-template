@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, OPTIONS',
+      'Access-Control-Allow-Headers': '*',
+      'X-Frame-Options': 'ALLOWALL',
+      'Content-Security-Policy': 'frame-ancestors *'
+    }
   },
   plugins: [
     react(),
